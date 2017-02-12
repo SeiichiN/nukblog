@@ -1,0 +1,24 @@
+<!--
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+-->
+<article>
+
+  <h2>最近の投稿</h2>
+  <% for entry in @entries %>
+    <div class="entry">
+      <div class="date">
+  			<%= entry.created_at.year %>年
+  			<%= entry.created_at.month %>月
+  			<%= entry.created_at.day %>日
+  		</div>
+      <h2 class="home-title"><%== entry.title %></h2>
+      <div><%== entry.to_html %></div>
+      <div><strong>Category:</strong><%= entry.cathegory %></div>
+      <div><strong>Tag:</strong><%= entry.tag %></div>
+      <div><strong>Count:</strong><%= entry.count %></div>
+      <p class="action"><%= link_to '', entry, class: 'fa fa-picture-o fa-3x' %></p>
+    </div>
+  <% end %>
+
+</article>

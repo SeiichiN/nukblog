@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+  <title>My開発メモ</title>
+  <%= favicon_link_tag %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <%#= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="main">
+	<header>
+
+		<h1><%= image_tag 'memo.png' %>My開発メモ</h1>
+
+		<nav class="header-menus" id="slide_menu">
+			<ul>
+				<li class="nav-icon"><%= link_to 'home', {controller: :home, action: :index}, id: :home %></li>
+				<li class="nav-icon"><%= link_to 'archive', {controller: :home, action: :archive}, id: :archive  %></li>
+				<li class="nav-icon"><%= link_to 'search', {controller: :home, action: :find}, id: :search  %></li>
+				<li class="nav-icon"><%= link_to 'info',{controller: :home, action: :about}, id: :info %></li>
+				<li class="nav-icon"><%= link_to 'write', {controller: :entries, action: :new}, id: :write %></li>
+				<li class="nav-icon"><%= link_to 'manage', {controller: :entries, action: :index}, id: :manage %></li>
+				<li class="gazo-icon"><%= link_to '一覧', {controller: :gazos, action: :index}, id: :ichiran %></li>
+			</ul>
+		</nav>
+
+		<button id="button"><i class="fa fa-bars fa-2x"></i></button>
+
+	</header>
+
+	<p style="color: green"><%= flash[:notice] %></p>
+
+	<%= yield  %>
+
+	<div id="page-top" class="page-top">
+		<p><a id="move-page-top" class="move-page-top">
+			<i class="fa fa-chevron-circle-up fa-3x"></i></a></p>
+	</div>
+
+	<footer>
+    <% @current = Time.now %>
+		<small>NukBlog version 1.2.6 &copy; <%= @current.strftime('%Y') %> Billie's Works</small>
+	</footer>
+</div><!-- main -->
+
+
+<script>
+// ファイルのアップロードで保存前の画像を表示・ファイル名も表示する
+
+function handleFileSelect(evt){
+	var files = evt.target.files;  // FileList object
+
+	// Loop through the FileList and render image files as thumbnails.
+	var f = files[0];
+
+	// only process image files.
+	if (!f.type.match('image.*')){
+		return; // 以降の処理はせずに、次の繰り返し処理にすすむ
+	}
+
+	var reader = new FileReader();
+
+	// Closure to capture the file information.
+	reader.onload = (function(theFile){
+		return function(e){
+			document.getElementById('outputList').setAttribute("src", e.target.result);
+			console.log("target : " + e.target.result);
+		};
+	})(f);
+
+	// Read in the image file as a data URL.
+	reader.readAsDataURL(f);
+
+	document.getElementById('gazo_file').setAttribute("value", escape(f.name));
+	document.getElementById('file_size').innerHTML = "<small>size: " + parseInt(f.size / 1000) + "k</small>";
+
+}
+document.getElementById('gazo_data').addEventListener('change', handleFileSelect, false);
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<article>
+
+<h2>検索</h2>
+
+<%= search_form_for @q do |f| %>
+<%= f.label :title_cont, '題名' %>
+<%= f.search_field :title_cont %><br />
+<%= f.label :body_cont, '本文' %>
+<%= f.search_field :body_cont %><br />
+<%= f.label :cathegory_cont, 'カテゴリ' %>
+<%= f.search_field :cathegory_cont %><br />
+<%= f.label :tag_cont, 'タグ' %>
+<%= f.search_field :tag_cont %>
+<div> 
+	<%= f.submit '検索する' %>
+</div>
+<% end %>
+
+  <div class="swipe-list theme-swipe-list">
+    <% @entries.each do |entry| %>
+      <div class="list js-swipeList clearfix">
+              <%# 画面本体部分 %>
+        <div class="list-body js-swipeListTarget">
+          <div class="list-contents list-cell <%= cycle('list-line-odd', 'list-line-even') %>">
+    				<div class="title"><%= link_to h(entry.title), entry %></div>
+            <div class="des1">
+              <p class="cathegory"><%= entry.cathegory %></p>
+              <p class="tag"><%= entry.tag %></p>
+            </div>
+            <div class="des2">
+              <p class="count"><%= entry.count %></p>
+    				  <p class="date">
+                <%= entry.created_at.strftime("%Y") %>
+                <%= entry.created_at.strftime("%m-%d") %>
+                <%= entry.created_at.strftime("%H:%M") %>
+              </p>
+            </div><!-- .des2 -->
+          </div><!-- .list-contents .list-cell -->
+          <div class="list-arrow list-cell"><i class="fa fa-angle-double-left"></i></div>
+        </div><!-- .list-body .js-swipeListTarget -->
+            <%# 以下、右側リスト部分 %>
+        <div class="list-btn js-swipeListBtn">
+          <ul class="action clearfix">
+            <li><%= link_to '', entry, class: 'fa fa-picture-o' %></li>
+            <li><%= link_to '', edit_entry_path(entry), class: 'fa fa-edit' %></li>
+            <li><%= link_to '', entry, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash' %>
+          </ul>
+        </div><!-- .list-btn .js-swipeListBtn -->
+      </div><!-- .list .js-swipeList .clearfix -->
+    <% end %>
+  </div><!-- .swipe-list .theme-swipe-list -->
+<br>
+
+<%= link_to 'New Entry', new_entry_path %>
+
+</article>

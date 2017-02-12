@@ -1,0 +1,121 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.clearfix:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.archive {
+	
+	#title-line {
+		font-size: 0;
+		button {
+			box-sizing: border-box;
+			display: inline-block;
+		}
+		button.title_title {
+			width: 53.5%;
+		}
+		button.title_cathegory,
+		button.title_tag {
+			width: 15%;
+		}
+		button.title_count {
+			width: 3%;
+		}
+		button.title_date {
+			width: 12.5%;
+		}
+	}
+
+	dl, dt, dd, p {
+		margin: 0;
+		padding: 0;
+	}
+	dt,
+	dd {
+		line-height: 1.6em;
+	}
+	
+	dt.arc-title {
+		float: left;
+		width: 54%;
+	}
+	.arc-cathegory,
+	.arc-tag {
+		float: left;
+		width: 15%;
+	}
+	.arc-count {
+		float: left;
+		width: 3%;
+	}
+	.arc-date {
+		float: right;
+		width: 12%;
+	}
+	.arc-title {
+		padding-left: 5px;
+	}
+	.arc-cathegory,
+	.arc-tag,
+	.arc-count,
+	.arc-date {
+		font-size: 0.8em;
+	}
+}
+.list-line-even {
+	background-color: #e0f8f8;
+}
+.list-line-odd {
+	background-color: #f5e8f5;
+}
+
+@media screen and ( max-width: 481px){
+	article.archive {
+		#title-line {
+			display: none;
+		}
+		dl {
+			dt.arc-title {
+				float: none;
+				width: 100%;
+			}
+			dd.des1{
+				display: table;
+				border-collapse: separate;
+				border-spacing: 5px 0;
+				p.arc-cathegory {
+					background: url("category.png") no-repeat;
+				}
+				p.arc-tag {
+					background: url("tag.png") no-repeat;
+				}
+				p.arc-cathegory,
+				p.arc-tag {
+					float: none;
+					width: auto;
+					background-position: left 0px;
+					padding-left: 16px;
+					margin-left: 5px;
+					font-size: 0.8em;
+					display: table-cell;
+				}
+			}
+			dd.des2 {
+				width: 100%;
+				text-align: right;
+				p.arc-count,
+				p.arc-date {
+					float: none;
+					width: auto;
+					display: inline;
+					margin-left: 10px;
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+}

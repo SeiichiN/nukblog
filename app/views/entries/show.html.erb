@@ -1,0 +1,38 @@
+<article>
+
+<p id="notice"><%= notice %></p>
+
+	<h2 class="home-title">
+		<%= @entry.title %>
+	</h2>
+
+	<p>
+	  <%== @entry.to_html %>
+	</p>
+
+	<p>
+		<strong>カテゴリ:</strong>
+		<%= @entry.cathegory %>
+	</p>
+
+	<p>
+		<strong>タグ:</strong>
+		<%= @entry.tag %>
+	</p>
+
+	<p>
+		<% count = @entry.count.to_i + 0 %>
+		<strong>Count:</strong>
+		<%= @entry.count %>
+	</p>
+
+	<p>
+	  <strong>DATE:</strong>
+	  <%= @entry.created_at %>
+	</p>
+
+	<p class="action">
+		<%= link_to '', edit_entry_path(@entry), class: 'fa fa-edit fa-3x' %>
+		<%= link_to '', home_archive_path, class: 'fa fa-list fa-3x' %>
+	</p>
+</article>

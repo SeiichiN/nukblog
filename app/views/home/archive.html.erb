@@ -1,0 +1,61 @@
+<article class="archive">
+	<h2>アーカイブ</h2>
+
+<%# 並び替えボックス %>
+	<%= form_tag(action: :archive) do %>
+		<%= select_tag :text1, options_for_select({'カテゴリ' => 'cathegory', 'タグ' => 'tag', 'カウント' => 'count', 'DATE' => 'created_at'}), class: 'button44' %>
+		<%= select_tag :text2, options_for_select({'昇順' => 'asc', '降順' => 'desc'}), class: 'button44' %>
+		<%= submit_tag '並び替える', class: 'button44_submit' %>
+	<% end %>
+
+	<%#= button_to 'cathegoty', :text1 %>
+
+
+<!--
+	<form method="post" action="/home/archive">
+		<select size="3" name="text1">
+			<option>cathegory</option>
+			<option>tag</option>
+			<option>created_at</option>
+		</select>
+		<input type="submit">
+	</form>
+-->
+
+	<%# タイトル行の出力 %>
+	<div id="title-line" class="clearfix">
+		<!-- <button class="title_title">Title</button>
+		<button class="title_cathegory">Category</button> -->
+		<%#= button_to "cathegoty", 'sort_key', remote: true %>
+		<%#= button_to "tag", @sort_key, remote: true %>
+		<%#= button_to "created_at", @sort_key, remote: true %>
+		<button class="title_title">Title</button>
+		<button class="title_cathegory">Category</button>
+		<button class="title_tag">Tag</button>
+		<button class="title_count">C</button>
+		<button class="title_date">Date</button>
+	</div>
+	
+	<%# 本文の出力 %>
+	<% for entry in @entries %>
+		<dl class="<%= cycle('list-line-odd', 'list-line-even') %> clearfix">
+			<dt class="arc-title">
+				<%=link_to h(entry.title), :controller => 'entries', :action => 'show', :id => entry %>
+			</dt>
+			<dd class="des1">
+				<p class="arc-cathegory">
+				<%= entry.cathegory %></p>
+				<p class="arc-tag">
+				<%= entry.tag %></p>
+			</dd>
+			<dd class="des2">
+				<p class="arc-count">
+				<%= entry.count %></p>
+				<p class="arc-date">
+				<%=h entry.created_at.year %>.
+				<%=h entry.created_at.month %>.
+				<%=h entry.created_at.day %></p>
+			</dd>
+		</dl>
+	<% end %>
+</article>

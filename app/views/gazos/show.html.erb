@@ -1,0 +1,32 @@
+<article>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= "id : #{@gazo.id}" %>
+<p>
+  <strong>File:</strong>
+  <%= @gazo.file %>
+  <%#= "ctrl/show_image/#{@gazo.id}" %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @gazo.comment %>
+</p>
+
+<p>
+  <strong>Ctype:</strong>
+  <%= @gazo.ctype %>
+</p>
+
+<p class="image">
+  <%= image_tag(url_for(controller: :ctrl, action: :show_image, id: @gazo.id)) %>
+</p>
+
+<p class="action">
+	<%= link_to '', edit_gazo_path(@gazo), class: 'fa fa-edit fa-3x' %>
+	<%= link_to '', gazos_path, class: 'fa fa-list fa-3x' %>
+<p>
+	
+</article>

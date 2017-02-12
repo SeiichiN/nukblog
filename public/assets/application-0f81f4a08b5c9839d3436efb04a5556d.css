@@ -1,0 +1,231 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* line 6, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+input#entry_title {
+  width: 500px;
+}
+
+/* line 9, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+textarea#entry_body {
+  width: 500px;
+  height: 300px;
+}
+
+/* line 13, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+h2.entry-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  line-height: 1em;
+}
+
+/* line 21, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+h3 {
+  border-left: solid 10px black;
+  border-bottom: solid 1px black;
+  padding: 5px 10px;
+  background-color: #ddd;
+}
+
+/* line 28, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+h4 {
+  border-bottom: solid 1px black;
+  border-right: solid 5px black;
+  padding-bottom: 5px;
+}
+
+/* line 33, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+header {
+  width: 98%;
+  height: 90px;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+}
+/* line 40, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 44, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav ul li {
+  display: inline;
+}
+/* line 46, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav ul li a {
+  padding: 5px 0;
+}
+
+/* line 53, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+article {
+  margin-top: 90px;
+}
+
+/* line 57, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+td.entry-title a {
+  text-decoration: none;
+}
+
+/* line 62, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+td.entry-date,
+td.entry-action {
+  text-align: right;
+}
+
+@media screen and (max-width: 481px) {
+  /* line 66, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+  h1, h2, h3, h4, h5 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #000;
+  }
+
+  /* line 70, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+  h1 {
+    font-weight: bold;
+    font-size: 130%;
+  }
+
+  /* line 74, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+  input#entry_title {
+    width: 98%;
+  }
+
+  /* line 77, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/entries.css.scss */
+  textarea#entry_body {
+    width: 98%;
+    height: 300px;
+  }
+}
+/* line 5, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/home.css.scss */
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* line 10, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/home.css.scss */
+.archive {
+  margin-top: 90px;
+}
+/* line 12, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/home.css.scss */
+.archive dl {
+  margin: 0;
+  padding: 0;
+}
+/* line 17, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/home.css.scss */
+.archive dt,
+.archive dd {
+  line-height: 1.6em;
+}
+/* line 20, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/home.css.scss */
+.archive dt {
+  float: left;
+}
+/* line 23, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/home.css.scss */
+.archive dd {
+  float: right;
+}
+
+/* line 27, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/home.css.scss */
+.list-line-even {
+  background-color: #e0f8f8;
+}
+
+/* line 30, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/home.css.scss */
+.list-line-odd {
+  background-color: #f5e8f5;
+}
+/* line 1, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #222;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* line 9, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* line 15, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* line 21, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /home/se-ichi/ForHeroku/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

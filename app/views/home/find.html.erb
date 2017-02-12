@@ -1,0 +1,42 @@
+<article class="find archive">
+	<h2>検索</h2>
+
+<%# 検索ボックス %>
+<%= form_tag(action: :find) do %>
+	<%= select_tag :search_field, options_for_select({ 'タイトル' => 'title', '本文' => 'body', 'カテゴリ' => 'cathegory', 'タグ' => 'tag'}), class: 'button44' %>
+	<span class="btn44aria"><%= text_field_tag :search_word %></span>
+	<%= submit_tag '検索', class: 'button44_submit' %>
+<% end %>
+	
+
+	<%# タイトル行の出力 %>
+	<div id="title-line" class="clearfix">
+		<button class="title_title">Title</button>
+		<button class="title_cathegory">Category</button>
+		<button class="title_tag">Tag</button>
+		<button class="title_count">C</button>
+		<button class="title_date">Date</button>
+	</div>
+	
+	<%# 本文の出力 %>
+	<% for entry in @entries %>
+		<dl class="<%= cycle('list-line-odd', 'list-line-even') %> clearfix">
+			<dt class="arc-title">
+				<%=link_to h(entry.title), :controller => 'entries', :action => 'show', :id => entry %>
+			</dt>
+			<dd class="des1">
+				<p class="arc-cathegory">
+					<%= entry.cathegory %></p>
+				<p class="arc-tag">
+					<%= entry.tag %></p>
+			<dd class="des2">
+				<p class="arc-count">
+					<%= entry.count %></p>
+				<p class="arc-date">
+					<%=h entry.created_at.year %>.
+					<%=h entry.created_at.month %>.
+					<%=h entry.created_at.day %></p>
+			</dd>
+		</dl>
+	<% end %>
+</article>

@@ -1,0 +1,551 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* line 6, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+input#entry_title {
+  width: 500px;
+}
+
+/* line 9, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+textarea#entry_body {
+  width: 500px;
+  height: 300px;
+}
+
+/* line 13, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 17, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 21, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+h2.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #666;
+  color: white;
+  padding: 10px;
+  line-height: 1em;
+}
+
+/* line 29, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+h3 {
+  border-left: solid 10px black;
+  border-bottom: solid 1px black;
+  padding: 5px 10px;
+  background-color: #ddd;
+}
+
+/* line 36, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+h4 {
+  border-bottom: solid 1px black;
+  border-right: solid 5px black;
+  padding-bottom: 5px;
+}
+
+/* line 41, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+div.main {
+  width: 97%;
+  margin: 0 auto;
+}
+
+/* line 45, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header {
+  width: 98%;
+  height: 110px;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+}
+/* line 52, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header #upper h1 {
+  float: left;
+}
+/* line 54, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header #upper h1 img {
+  vertical-align: -6px;
+}
+/* line 58, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header #upper nav.gazo-menus {
+  float: left;
+  margin-left: 10px;
+}
+/* line 61, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header #upper nav.gazo-menus ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+/* line 66, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header #upper nav.gazo-menus ul li a#ichiran {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url(ichiran30.png) no-repeat;
+}
+/* line 80, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 84, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul li {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+}
+/* line 89, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul li a {
+  display: block;
+  padding: 11px;
+  overflow: hidden;
+  text-indent: 150%;
+  white-space: nowrap;
+}
+/* line 96, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul li a#home {
+  background: url(home.png) no-repeat;
+}
+/* line 99, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul li a#archive {
+  background: url(archive.png) no-repeat;
+}
+/* line 102, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul li a#search {
+  background: url(search.png) no-repeat;
+}
+/* line 105, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul li a#info {
+  background: url(info.png) no-repeat;
+}
+/* line 108, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul li a#write {
+  background: url(write.png) no-repeat;
+}
+/* line 111, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+header nav.header-menus ul li a#manage {
+  background: url(manage.png) no-repeat;
+}
+
+/* line 118, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article {
+  margin-top: 120px;
+}
+/* line 120, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article .entry {
+  margin-bottom: 20px;
+}
+/* line 123, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article .item {
+  min-width: 245px;
+  padding: 10px;
+}
+/* line 128, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article .item .des1 .title a {
+  text-decoration: none;
+  color: #333;
+}
+/* line 134, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article .item .des1 .cathegory,
+article .item .des1 .tag {
+  background-repeat: no-repeat;
+  background-position: left 4px;
+  padding-left: 16px;
+  font-size: 0.8em;
+  display: inline;
+}
+/* line 141, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article .item .des1 .cathegory {
+  background-image: url("category.png");
+}
+/* line 144, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article .item .des1 .tag {
+  background-image: url("tag.png");
+  margin-left: 10px;
+}
+/* line 149, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article .item .des2 {
+  text-align: right;
+}
+/* line 152, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article .item .des2 .count,
+article .item .des2 .date {
+  display: inline;
+  margin-left: 10px;
+  font-size: 0.8em;
+}
+/* line 159, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article ul.action {
+  list-style-type: none;
+}
+/* line 162, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+article ul.action li a {
+  color: #666;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* line 170, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+.upload_field {
+  margin-top: 100px;
+}
+
+/* line 173, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+footer {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 482px) {
+  /* line 178, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+  .list {
+    position: relative;
+  }
+  /* line 180, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+  .list .list-btn {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+  }
+  /* line 185, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+  .list .list-btn ul li {
+    float: left;
+    margin: 5px;
+  }
+  /* line 188, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/entries.css.scss */
+  .list .list-btn ul li a {
+    padding: 0;
+    background-color: #fafafa;
+  }
+}
+/* line 5, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/gazos.css.scss */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*
+ul, li, dl, dt, dd {
+	margin: 0;
+	padding: 0;
+}
+*/
+/* line 16, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/gazos.css.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 19, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/gazos.css.scss */
+ul.action {
+  list-style-type: none;
+  padding-left: 0;
+}
+/* line 22, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/gazos.css.scss */
+ul.action a.fa {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 10px;
+  color: #666;
+}
+
+/* line 29, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/gazos.css.scss */
+header {
+  z-index: 20;
+}
+
+/* line 32, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/gazos.css.scss */
+dd.image {
+  width: 245px;
+  height: auto;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 481px) {
+  /* line 51, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/gazos.css.scss */
+  header {
+    z-index: 20;
+  }
+}
+/* line 5, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* line 10, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.archive {
+  margin-top: 120px;
+}
+/* line 12, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.archive dl, .archive dt, .archive dd, .archive p {
+  margin: 0;
+  padding: 0;
+}
+/* line 17, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.archive dt,
+.archive dd {
+  line-height: 1.6em;
+}
+/* line 21, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.archive button.title_title,
+.archive dt.arc-title {
+  float: left;
+  width: 54%;
+}
+/* line 28, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.archive button.title_cathegory,
+.archive button.title_tag,
+.archive .arc-cathegory,
+.archive .arc-tag {
+  float: left;
+  width: 15%;
+}
+/* line 33, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.archive button.title_count,
+.archive .arc-count {
+  float: left;
+  width: 3%;
+}
+/* line 38, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.archive button.title_date,
+.archive .arc-date {
+  float: right;
+  width: 13%;
+}
+/* line 44, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.archive .arc-title,
+.archive .arc-cathegory,
+.archive .arc-count {
+  padding-left: 5px;
+}
+
+/* line 48, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.list-line-even {
+  background-color: #e0f8f8;
+}
+
+/* line 51, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/home.css.scss */
+.list-line-odd {
+  background-color: #f5e8f5;
+}
+/* line 1, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #222;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* line 9, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* line 15, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 14px;
+  overflow: auto;
+}
+
+/*
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+*/
+/* line 35, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 57, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 67, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* swlist.scss  --- swipeList --- */
+@media screen and (min-width: 482px) {
+  /* line 5, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .list .list-body {
+    border: solid 1px #e0e0e0;
+  }
+  /* line 9, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .list .list-body .list-contents dl.item {
+    margin: 0;
+  }
+  /* line 13, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .list .list-body .list-arrow {
+    display: none;
+  }
+  /* line 20, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .list .list-btn ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #666;
+  }
+}
+@media screen and (max-width: 481px) {
+  /* line 32, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  header {
+    z-index: 20;
+  }
+
+  /* line 36, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .swipe-list .list {
+    display: table;
+    height: 100%;
+    position: relative;
+  }
+  /* line 40, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .swipe-list .list .list-body {
+    position: relative;
+    z-index: 10;
+  }
+  /* line 46, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .swipe-list .list .list-contents .item {
+    padding: 10px;
+    margin: 0;
+  }
+  /* line 51, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .swipe-list .list .list-arrow {
+    color: #fff;
+    padding: 10px;
+    background: #00897b;
+    vertical-align: middle;
+  }
+  /* line 57, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .swipe-list .list .list-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  /* line 61, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .swipe-list .list .list-btn ul {
+    display: table;
+    height: 100%;
+  }
+  /* line 64, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .swipe-list .list .list-btn ul li {
+    display: table-cell;
+    height: 100%;
+    padding: 15px;
+    vertical-align: middle;
+  }
+  /* line 69, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .swipe-list .list .list-btn ul li a {
+    color: #fff;
+    font-size: 14px;
+    padding: 0;
+  }
+
+  /* theme-swipe-list */
+  /* line 83, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list.is-left .list-btn {
+    right: auto;
+    left: 0;
+  }
+  /* line 88, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list .list {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  /* line 93, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list .list .list-cell {
+    display: table-cell;
+  }
+  /* line 96, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list .list .list-body {
+    border: solid 1px #e0e0e0;
+  }
+  /* line 99, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list .list .titile {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: solid 2px #90a4ae;
+  }
+  /* line 106, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list .list .list-btn {
+    height: 100%;
+  }
+  /* line 109, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list .list .list-btn li:nth-child(1) {
+    background: #fb8c00;
+  }
+  /* line 112, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list .list .list-btn li:nth-child(2) {
+    background: #546e7a;
+  }
+  /* line 115, /home/se-ichi/ForMogok/nukblog/app/assets/stylesheets/swipelist.css.scss */
+  .theme-swipe-list .list .list-btn li:nth-child(3) {
+    background: #dd191d;
+  }
+}

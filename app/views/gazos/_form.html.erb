@@ -1,0 +1,43 @@
+<%= form_for(@gazo, url: {controller: :ctrl, action: :updb_process, id: @gazo},
+  html:{multipart: true}) do |f| %>
+  <% if @gazo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gazo.errors.count, "error") %> prohibited this gazo from being saved:</h2>
+
+      <ul>
+      <% @gazo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% id_no = @gazo.id %>
+  <% if id_no == nil then %>
+  <%  id_no = 1 %>
+  <% end %>
+
+  <%= "id : #{@gazo.id}" %>
+
+  <div class="field">
+    <%= f.label :file %><br>
+    <%= f.text_field :file %>
+    <%#= @gazo.file %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field image">
+    <%= f.label :image %><br>
+    <%= image_tag url_for(controller: :ctrl, action: :show_image, id: id_no), id: 'outputList' %>    
+  </div>
+  <div class="field btn44aria">
+    <%= f.label :data, 'アップ画像' %><br>
+    <%= f.file_field :data %>
+    <div id="file_size"></div>
+  </div>
+  <div class="actions btn44aria">
+    <%= f.submit 'アップロード' %>
+  </div>
+<% end %>
