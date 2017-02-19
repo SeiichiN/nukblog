@@ -4,30 +4,25 @@ development:
   encodint: utf8
   database: nukblog
   pool: 5
-  username: se-ichi
-  password: qwer
+  username: root
+  password: 
   host: localhost
-  socket: /var/run/mysqld/mysqld.sock
 
 test:
   adapter: mysql2
   encodint: utf8
   database: nukblog
   pool: 5
-  username: se-ichi
-  password: qwer
-  socket: /var/run/mysqld/mysqld.sock
-#  socket: /tmp/mysql.sock
+  username: root
+  password: 
 
 production:
   adapter: mysql2
   encodint: utf8
   database: nukblog
   pool: 5
-  username: se-ichi
-  password: qwer
-  socket: /var/run/mysqld/mysqld.sock
-#  socket: /tmp/mysql.sock
+  username: root
+  password: 
 
 
 

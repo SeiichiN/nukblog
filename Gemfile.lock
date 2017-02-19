@@ -123,9 +123,12 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mysql2
-  rails (= 4.0.5)
+  rails
   ransack
   sass-rails (~> 4.0.2)
   sdoc
   uglifier (>= 1.3.0)
   yaml_db
+
+BUNDLED WITH
+   1.14.4
